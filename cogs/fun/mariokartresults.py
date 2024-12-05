@@ -23,6 +23,10 @@ class MarioKartResults(commands.Cog):
 
     @commands.slash_command(name='score')
     async def add_score(self, ctx, player: commands.MemberConverter, points: int):
+        if ctx.author.id != 841613559870914580:
+            await ctx.send("You do not have permission to use this command.")
+            return
+
         day = datetime.now().strftime('%Y-%m-%d')
         db_path = os.path.join(DATABASE_FOLDER, 'mariokart_results.db')
         conn = sqlite3.connect(db_path)
