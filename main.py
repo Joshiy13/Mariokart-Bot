@@ -17,15 +17,15 @@ cogs_list_fun = [
 ]
 
 cogs_list_misc = [
-    "help",
     "ping"
 ]
 
 for cog in cogs_list_fun:
     client.load_extension(f"cogs.fun.{cog}")
 
-
-
+for cog in cogs_list_misc:
+    client.load_extension(f"cogs.misc.{cog}")
+    
 @client.event
 async def on_ready():
     client.loop.create_task(status_task())
