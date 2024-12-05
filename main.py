@@ -13,9 +13,7 @@ intents.reactions = True
 intents.voice_states = True
 
 cogs_list_fun = [
-    "score",
-    "leaderboard",
-    "player"
+    "mariokartresults",
 ]
 
 cogs_list_misc = [
@@ -39,7 +37,7 @@ async def status_task():
     while True:
         await client.change_presence(activity=discord.Game(name="/help"))
         await asyncio.sleep(10)
-        await client.change_presence(activity=discord.Game(name="Celestix.dev"))
+        await client.change_presence(activity=discord.Game(name="test"))
         await asyncio.sleep(10)
 
 
