@@ -17,7 +17,8 @@ cogs_list_fun = [
 ]
 
 cogs_list_misc = [
-    "ping"
+    "ping",
+    "sourcecode"
 ]
 
 for cog in cogs_list_fun:
@@ -38,6 +39,8 @@ async def status_task():
         await client.change_presence(activity=discord.Game(name="/leaderboard"))
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name="/ping"))
+        await asyncio.sleep(10)
+        await client.change_presence(activity=discord.Game(name="/sourcecode"))
         await asyncio.sleep(10)
 
 
