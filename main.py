@@ -35,9 +35,9 @@ async def on_ready():
 
 async def status_task():
     while True:
-        await client.change_presence(activity=discord.Game(name="/help"))
+        await client.change_presence(activity=discord.Game(name="/leaderboard"))
         await asyncio.sleep(10)
-        await client.change_presence(activity=discord.Game(name="test"))
+        await client.change_presence(activity=discord.Game(name="/ping"))
         await asyncio.sleep(10)
 
 
